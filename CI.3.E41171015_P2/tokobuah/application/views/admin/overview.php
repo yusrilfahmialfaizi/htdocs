@@ -2,38 +2,21 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>SB Admin - Dashboard</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="<?php echo base_url('assets/fontawesome-free/css/all.min.css')?>" rel="stylesheet" type="text/css">
-
-  <!-- Page level plugin CSS-->
-  <link href="<?php echo base_url('assets/datatables/dataTables.bootstrap4.css')?>" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('css/sb-admin.css')?>" rel="stylesheet">
-
+  <?php $this->load->view('admin/_partial/head.php') ?>
 </head>
 
 <body id="page-top">
 
-  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+  <!-- <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
     <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
-    </button>
+    </button> -->
 
     <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+<!--     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
@@ -43,9 +26,9 @@
         </div>
       </div>
     </form>
-
+ -->
     <!-- Navbar -->
-    <ul class="navbar-nav ml-auto ml-md-0">
+<!--     <ul class="navbar-nav ml-auto ml-md-0">
       <li class="nav-item dropdown no-arrow mx-1">
         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-bell fa-fw"></i>
@@ -84,11 +67,11 @@
     </ul>
 
   </nav>
-
+ --> <?php $this->load->view('admin/_partial/navbar.php') ?>
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
+    <!-- <ul class="sidebar navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -121,19 +104,21 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>
-    </ul>
+    </ul> -->
+    <?php $this->load->view('admin/_partial/sidebar.php') ?>
 
     <div id="content-wrapper">
 
       <div class="container-fluid">
 
         <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
+        <!-- <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
           <li class="breadcrumb-item active">Overview</li>
-        </ol>
+        </ol> -->
+        <?php $this->load->view('admin/_partial/breadcrumb.php') ?>
 
         <!-- Icon Cards-->
         <div class="row">
@@ -710,13 +695,14 @@
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
-      <footer class="sticky-footer">
+      <!-- <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright © Your Website 2019</span>
           </div>
         </div>
-      </footer>
+      </footer> -->
+      <?php $this->load->view('admin/_partial/footer.php') ?>
 
     </div>
     <!-- /.content-wrapper -->
@@ -725,12 +711,13 @@
   <!-- /#wrapper -->
 
   <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
+  <!-- <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
-  </a>
+  </a> -->
+  <?php $this->load->view('admin/_partial/scrolltop.php') ?>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -746,27 +733,27 @@
         </div>
       </div>
     </div>
-  </div>
-
+  </div> -->
+    <?php $this->load->view('admin/_partial/modal.php') ?>
   <!-- Bootstrap core JavaScript-->
-  <script src="<?php echo base_url('assets/jquery/jquery.min.js')?>"></script>
-  <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+  <!-- <script src="<?php //echo base_url('assets/jquery/jquery.min.js')?>"></script>
+  <script src="<?php //echo base_url('assets/bootstrap/js/bootstrap.bundle.min.js')?>"></script> -->
 
   <!-- Core plugin JavaScript-->
-  <script src="<?php echo base_url('assets/jquery-easing/jquery.easing.min.js')?>"></script>
+  <!-- <script src="<?php //echo base_url('assets/jquery-easing/jquery.easing.min.js')?>"></script> -->
 
   <!-- Page level plugin JavaScript-->
-  <script src="<?php echo base_url('assets/chart.js/Chart.min.js')?>"></script>
-  <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js')?>"></script>
-  <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap4.js')?>"></script>
+  <!-- <script src="<?php //echo base_url('assets/chart.js/Chart.min.js')?>"></script> -->
+  <!-- <script src="<?php //echo base_url('assets/datatables/jquery.dataTables.js')?>"></script> -->
+  <!-- <script src="<?php //echo base_url('assets/datatables/dataTables.bootstrap4.js')?>"></script> -->
 
   <!-- Custom scripts for all pages-->
-  <script src="<?php echo base_url('js/sb-admin.min.js')?>"></script>
+  <!-- <script src="<?php //echo base_url('js/sb-admin.min.js')?>"></script> -->
 
   <!-- Demo scripts for this page-->
-  <script src="<?php echo base_url('js/demo/datatables-demo.js')?>"></script>
-  <script src="<?php echo base_url('js/demo/chart-area-demo.js')?>"></script>
-
+  <!-- <script src="<?php //echo base_url('js/demo/datatables-demo.js')?>"></script> -->
+  <!-- <script src="<?php //echo base_url('js/demo/chart-area-demo.js')?>"></script> -->
+  <?php $this->load->view('admin/_partial/js.php') ?>
 </body>
 
 </html>
