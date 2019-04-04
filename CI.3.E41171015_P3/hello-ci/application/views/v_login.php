@@ -4,8 +4,8 @@
 	<title>Membuat Login Dengan CodeIgniter | www.malasngoding.com</title>
 </head>
 <body>
-	<h1>Membuat Login Dengan CodeIgniter <br/> www.malasngoding.com</h1>
-	<form action="<?php echo base_url('index.php/login/aksi_login'); ?>" method="post">		
+	<center><h1>Login <br/> www.mutiarabahari.com</h1></center>
+	<center><form action="<?php echo base_url('index.php/login/aksi_login'); ?>" method="post">		
 		<table>
 			<tr>
 				<td>Username</td>
@@ -20,6 +20,6 @@
 				<td><input type="submit" value="Login"></td>
 			</tr>
 		</table>
-	</form>
+	</form></center>
 </body>
 </html>

@@ -4,7 +4,7 @@
 	<title>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</title>
 </head>
 <body>
-		<center><h1>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</h1></center>
+		<center><h1>Data</h1></center>
 		<center><?php echo anchor('crud/tambah','Tambah Data'); ?></center>
 		<table style="margin:20px auto; border-collapse: collapse;" border="1">
 			<tr>
@@ -30,5 +30,6 @@
 			</tr>
 			<?php } ?>
 		</table>
+		<a href="<?php echo base_url('index.php/login/logout'); ?>">Logout</a>
 </body>
 </html>
