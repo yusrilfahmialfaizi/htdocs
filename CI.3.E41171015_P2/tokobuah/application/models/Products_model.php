@@ -40,7 +40,7 @@
 		}
 		public function getById($id)
 		{
-			$this->db->get_where($this->$_table,["products_id"=> $id])->row();	
+			return $this->db->get_where($this->_table,["products_id"=> $id])->row();	
 			// SELECT * FROM products WHERE products_id = $id
 		}
 		// CREATE / mengisikan data
@@ -59,7 +59,7 @@
 		public function update()
 		{
 			$post = $this->input->post();
-			$this->products_id = uniqid();
+			$this->products_id = $post['id'];
 			$this->name = $post["name"];
 			$this->price = $post["price"];
 			$this->description = $post["description"];
@@ -70,7 +70,7 @@
 		// DELETE
 		public function delete($id)
 		{
-			return $this->db->delete($this->_table, $this, array('products_id' =>$post['id']));
+			return $this->db->delete($this->_table, array('products_id' =>$id));
 			// DELETE.....FROM ....
 		}
 	}

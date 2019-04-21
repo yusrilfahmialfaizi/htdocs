@@ -13,8 +13,8 @@
 				<!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
-            <i class="fas fa-table"></i>
-            Data Table Example</div>
+            <a href="<?php echo site_url('admin/products/add') ?>"> <i class="fas fa-plus"></i> Add New</a>
+          </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -25,6 +25,7 @@
                     <th>Price</th>
                     <th>Image</th>
                     <th>Description</th>
+                    <th>Option</th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -34,6 +35,7 @@
                     <th>Price</th>
                     <th>Image</th>
                     <th>Description</th>
+                    <th>Option</th>
                   </tr>
                 </tfoot>
                 <tbody>
@@ -43,11 +45,15 @@
                         # code...
                    ?>
                    <tr>
-                      <td><?php echo $no++ ?></td>
-                      <td><?php echo $a->name ?></td>
-                      <td><?php echo $a->price ?></td>
-                      <td><?php echo $a->image ?></td>
-                      <td><?php echo $a->description ?></td>
+                    <td><?php echo $no++ ?></td>
+                    <td><?php echo $a->name ?></td>
+                    <td><?php echo $a->price ?></td>
+                    <td><?php echo $a->image ?></td>
+                    <td><?php echo $a->description ?></td>   
+                    <td width="250">
+                        <a href="<?php echo site_url('admin/products/edit/'.$a->products_id) ?>" class="btn btn-small"><i class="fas fa-edit"></i>Edit</a>
+                        <a href="<?php echo site_url('admin/products/delete/'.$a->products_id) ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i>Hapus</a>
+                    </td>
                    </tr>
                  <?php } ?>
                 </tbody>
@@ -64,5 +70,6 @@
 			</div>
 		</div>
 	</div>
+  <?php $this->load->view('admin/_partial/js') ?>
 </body>
 </html>
